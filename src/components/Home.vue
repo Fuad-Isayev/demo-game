@@ -3,9 +3,9 @@
     <div>
       <div v-if="user">
         <h1>Hello, {{ user.first_name }} {{ user.last_name }}</h1>
-        <router-link class="btn" to="/game">Start a game</router-link>
       </div>
       <h1 v-if="!user">You are not logged in</h1>
+      <router-link class="btn" to="/game">Start a game</router-link>
       <router-view></router-view>
     </div>
   </div>

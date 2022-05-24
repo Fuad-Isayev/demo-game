@@ -67,7 +67,7 @@ export default {
   name: "Game",
   data() {
     return {
-      user: "",
+      // user: "",
       move: {
         x: 0.2,
         y: 5,
@@ -121,9 +121,9 @@ export default {
       this.interval = 5000;
       this.spawn();
     },
-    async getData() {
-      this.user = await this.$store.state.user;
-    },
+    // async getData() {
+    //   this.user = await this.$store.state.user;
+    // },
 
     //TRAIN PLAYER
     train_player() {

@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 5,
+      income: 25,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,

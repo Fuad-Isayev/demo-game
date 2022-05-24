@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 1,
+      income: 5,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
@@ -114,7 +114,7 @@ export default {
       this.player_castle.health = this.player_castle.initial_health;
       this.enemy_castle.health = this.enemy_castle.initial_health;
       this.money = 0;
-      this.income = 1;
+      this.income = 5;
       this.upgrades = 0;
       this.upgrade_cost = 50;
       this.loop();
@@ -237,7 +237,9 @@ export default {
       }
 
       //MAKE MONEY
-      this.money = this.money + this.income / 60;
+      window.innerWidth < 650
+        ? (this.money = this.money + this.income / 60)
+        : (this.money = this.money + this.income / 300);
 
       //MOVE Player
       this.player_soldiers.forEach((element) => {

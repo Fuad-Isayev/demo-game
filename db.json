@@ -1,0 +1,58 @@
+{
+  "register": [
+    {
+      "first_name": "Fuad",
+      "last_name": "Isayev",
+      "email": "fuad.isayev.1995@mail.ru",
+      "password": "1234",
+      "money": 10000,
+      "id": 1
+    },
+    {
+      "first_name": "Murad",
+      "last_name": "Isayev",
+      "email": "murad.isayev.1993@mail.ru",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "first_name": "Tuad",
+      "last_name": "Isayev",
+      "email": "fuad.isayev.1992@mail.ru",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "first_name": "Etibar",
+      "last_name": "Yarali",
+      "email": "fuad.isayev.1990@mail.ru",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "first_name": "sfsdfg",
+      "last_name": "sdfg",
+      "email": "sdfgsdfg@asdf.asdf",
+      "password": "asdf",
+      "id": 5
+    },
+    {
+      "first_name": "asdf",
+      "last_name": "asdf",
+      "email": "asdf@asdf.asdf",
+      "password": "asdf",
+      "id": 6
+    }
+  ],
+  "login": [
+    {
+      "first_name": "Fuad",
+      "last_name": "Isayev",
+      "email": "fuad.isayev.1995@mail.ru",
+      "password": "1234",
+      "money": 10000,
+      "id": 1
+    }
+  ],
+  "forgot": []
+}

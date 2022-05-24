@@ -237,7 +237,7 @@ export default {
       }
 
       //MAKE MONEY
-      this.money = this.money + this.income / 300;
+      this.money = this.money + this.income / 60;
 
       //MOVE Player
       this.player_soldiers.forEach((element) => {

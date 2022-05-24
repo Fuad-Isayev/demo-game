@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 25,
+      income: 1,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
@@ -236,7 +236,7 @@ export default {
       }
 
       //MAKE MONEY
-      this.money = this.money + this.income / 300;
+      this.money = this.money + this.income / 60;
 
       //MOVE Player
       this.player_soldiers.forEach((element) => {

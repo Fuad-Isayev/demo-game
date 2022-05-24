@@ -6,6 +6,10 @@
       </div>
       <h1 v-if="!user">You are not logged in</h1>
       <router-link class="btn" to="/game">Start a game</router-link>
+      <button @click="getWidth()">Get width</button>
+      <button @click="getHeight()">Get height</button>
+      <div>Width: {{ width }}</div>
+      <div>Height: {{ height }}</div>
       <router-view></router-view>
     </div>
   </div>
@@ -15,6 +19,12 @@
 // import axios from "axios";
 import { mapGetters } from "vuex";
 export default {
+  data() {
+    return {
+      width: "",
+      height: "",
+    };
+  },
   name: "Home",
   async created() {
     // let userID = localStorage.getItem("userID");
@@ -26,6 +36,16 @@ export default {
   },
   computed: {
     ...mapGetters(["user"]),
+  },
+  methods: {
+    getWidth() {
+      console.log("Width: " + window.innerWidth);
+      this.width = window.innerWidth;
+    },
+    getHeight() {
+      console.log("Height: " + window.innerHeight);
+      this.height = window.innerHeight;
+    },
   },
 };
 </script>

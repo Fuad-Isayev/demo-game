@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 5,
+      income: 1,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
@@ -114,7 +114,7 @@ export default {
       this.player_castle.health = this.player_castle.initial_health;
       this.enemy_castle.health = this.enemy_castle.initial_health;
       this.money = 0;
-      this.income = 100;
+      this.income = 1;
       this.upgrades = 0;
       this.upgrade_cost = 50;
       this.loop();
@@ -156,6 +156,7 @@ export default {
       this.enemy_soldiers.forEach((element) => {
         element.z = Math.floor(-1 + element.top);
       });
+      console.log("income: " + this.income);
     },
 
     //SPAWN ENEMY

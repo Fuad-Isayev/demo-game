@@ -92,7 +92,6 @@ export default {
       upgrade_cost: 50,
       interval: 5000,
       spawning: null,
-      ratio: 1,
       // ctx: this.canvas.getContext("2d"),
     };
   },
@@ -352,10 +351,12 @@ export default {
       } else {
         return "MAX";
       }
+    },
+    ratio() {
       if (window.innerWidth < 650) {
-        this.ratio = 5;
+        return 5;
       } else {
-        this.ratio = 1;
+        return 1;
       }
     },
   },

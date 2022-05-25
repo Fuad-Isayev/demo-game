@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 1,
+      income: 5,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
@@ -143,6 +143,7 @@ export default {
       }
       console.log("ratio: " + this.ratio);
       console.log("income: " + this.income);
+      console.log("move.x: " + this.move.x);
     },
 
     //TRAIN ENEMY

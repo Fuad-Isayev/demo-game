@@ -69,7 +69,7 @@ export default {
     return {
       // user: "",
       move: {
-        x: 0.2 * this.ratio,
+        x: 0.2,
         y: 5,
       },
       enemy_position: 1355,
@@ -86,7 +86,7 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 5 * this.ratio,
+      income: 1,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
@@ -141,6 +141,8 @@ export default {
         });
         this.money -= this.player_cost;
       }
+      console.log("ratio: " + this.ratio);
+      console.log("income: " + this.income);
     },
 
     //TRAIN ENEMY
@@ -299,6 +301,8 @@ export default {
   created() {
     this.loop();
 
+    this.multiply;
+
     //SPAWN ENEMY
     this.spawn();
 
@@ -358,6 +362,10 @@ export default {
       } else {
         return 1;
       }
+    },
+    multiply() {
+      this.income *= this.ratio;
+      this.move.x *= this.ratio;
     },
   },
 };

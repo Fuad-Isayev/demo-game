@@ -44,6 +44,15 @@
       "id": 6
     }
   ],
-  "login": [],
+  "login": [
+    {
+      "first_name": "Fuad",
+      "last_name": "Isayev",
+      "email": "fuad.isayev.1995@mail.ru",
+      "password": "1234",
+      "money": 10000,
+      "id": 1
+    }
+  ],
   "forgot": []
 }

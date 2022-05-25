@@ -69,7 +69,7 @@ export default {
     return {
       // user: "",
       move: {
-        x: 0.2,
+        x: 0.2 * this.ratio,
         y: 5,
       },
       enemy_position: 1355,
@@ -86,12 +86,13 @@ export default {
       winner: "",
       message: "",
       money: 0,
-      income: 5,
+      income: 5 * this.ratio,
       upgrades: 0,
       max_upgrades: 5,
       upgrade_cost: 50,
       interval: 5000,
       spawning: null,
+      ratio: 1,
       // ctx: this.canvas.getContext("2d"),
     };
   },
@@ -132,7 +133,7 @@ export default {
         this.player_soldiers.push({
           top: 0 + Math.floor(Math.random() * 50 + 1),
           left: 176,
-          power: 5,
+          power: 5 * this.ratio,
           health: 1000,
         });
         console.log("Players: " + this.player_soldiers.length);
@@ -149,7 +150,7 @@ export default {
       this.enemy_soldiers.push({
         top: 0 + Math.floor(Math.random() * 50 + 1),
         right: 176,
-        power: 3,
+        power: 3 * this.ratio,
         health: 1000,
       });
       console.log("Enemies: " + this.enemy_soldiers.length);
@@ -237,9 +238,7 @@ export default {
       }
 
       //MAKE MONEY
-      window.innerWidth < 650
-        ? (this.money = this.money + this.income / 60)
-        : (this.money = this.money + this.income / 300);
+      this.money = this.money + this.income / 300;
 
       //MOVE Player
       this.player_soldiers.forEach((element) => {
@@ -352,6 +351,11 @@ export default {
         return `UPGRADE $ ${Math.floor(this.upgrade_cost)}`;
       } else {
         return "MAX";
+      }
+      if (window.innerWidth < 650) {
+        this.ratio = 5;
+      } else {
+        this.ratio = 1;
       }
     },
   },

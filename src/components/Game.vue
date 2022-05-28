@@ -120,6 +120,7 @@ export default {
       this.loop();
       this.interval = 5000;
       this.spawn();
+      this.multiply;
     },
     // async getData() {
     //   this.user = await this.$store.state.user;

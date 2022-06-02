@@ -117,7 +117,7 @@ export default {
       this.player_castle.health = this.player_castle.initial_health;
       this.enemy_castle.health = this.enemy_castle.initial_health;
       this.money = 0;
-      this.income = 5;
+      this.income = 5 * this.ratio;
       this.upgrades = 0;
       this.upgrade_cost = 50;
       this.loop();

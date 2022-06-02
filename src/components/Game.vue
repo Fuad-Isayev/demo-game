@@ -55,7 +55,7 @@
         <button class="player_train" @click="train_player()">
           TRAIN ${{ player_cost }}
         </button>
-        <button class="upgrade" @click="upgrade()">{{ upg_msg }}</button>
+        <button class="upgrade" @click="upgrade()">{{ ratio }}</button>
         <button class="enemy_train" @click="train_enemy()">TRAIN</button>
       </div>
     </div>
@@ -63,6 +63,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Game",
   data() {
@@ -98,6 +99,8 @@ export default {
   methods: {
     //UPGRADE INCOME
     upgrade() {
+      console.log("income: " + this.income);
+      console.log("ratio: " + this.ratio);
       if (this.money > this.upgrade_cost && this.upgrades < this.max_upgrades) {
         this.income = this.income * 1.5;
         this.money -= this.upgrade_cost;
@@ -350,6 +353,7 @@ export default {
     });
   },
   computed: {
+    ...mapGetters(["ratio"]),
     upg_msg() {
       if (this.upgrades < this.max_upgrades) {
         return `UPGRADE $ ${Math.floor(this.upgrade_cost)}`;
@@ -357,13 +361,13 @@ export default {
         return "MAX";
       }
     },
-    ratio() {
-      if (window.innerWidth < 650) {
-        return 5;
-      } else {
-        return 1;
-      }
-    },
+    // ratio() {
+    //   if (window.innerWidth < 650) {
+    //     return 5;
+    //   } else {
+    //     return 1;
+    //   }
+    // },
     multiply() {
       this.income *= this.ratio;
       this.move.x *= this.ratio;

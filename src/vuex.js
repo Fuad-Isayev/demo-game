@@ -14,6 +14,9 @@ const store = createStore({
     reset: (state) => {
       return state.reset;
     },
+    ratio: (state) => {
+      return state.ratio;
+    },
   },
   actions: {
     user(context, user) {
@@ -22,6 +25,9 @@ const store = createStore({
     reset(context, reset) {
       context.commit("reset", reset);
     },
+    ratio(context, ratio) {
+      context.commit("ratio", ratio);
+    },
   },
   mutations: {
     user(state, user) {
@@ -29,6 +35,9 @@ const store = createStore({
     },
     reset(state, reset) {
       state.reset = reset;
+    },
+    ratio(state, ratio) {
+      state.ratio = ratio;
     },
   },
 });

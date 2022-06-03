@@ -135,7 +135,7 @@ export default {
         this.player_soldiers.push({
           top: Math.floor(Math.random() * 35 + 1),
           left: 12.5,
-          power: 5 * this.ratio,
+          power: 3 * this.ratio,
           health: 1000,
         });
         console.log("Players: " + this.player_soldiers.length);

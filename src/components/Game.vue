@@ -70,7 +70,7 @@ export default {
     return {
       // user: "",
       move: {
-        x: 0.005,
+        x: 0.02,
         y: 5,
       },
       enemy_position: 87,
@@ -86,7 +86,7 @@ export default {
       game_finished: false,
       winner: "",
       message: "",
-      money: 1000,
+      money: 0,
       income: 5,
       upgrades: 0,
       max_upgrades: 5,
@@ -116,7 +116,7 @@ export default {
       this.enemy_soldiers = [];
       this.player_castle.health = this.player_castle.initial_health;
       this.enemy_castle.health = this.enemy_castle.initial_health;
-      this.money = 1000;
+      this.money = 0;
       this.income = 5 * this.ratio;
       this.upgrades = 0;
       this.upgrade_cost = 50;

@@ -37,7 +37,11 @@ export default {
     // }
     // let userdata = await axios.get(`login`);
     // this.user = userdata.data;
-    this.getFrameRate();
+
+    setTimeout(() => {
+      this.getFrameRate();
+      console.log("Fired");
+    }, 500);
   },
   computed: {
     ...mapGetters(["user"]),
@@ -54,7 +58,7 @@ export default {
     loop() {
       if (!this.frameRate) {
         requestAnimationFrame(this.loop);
-        this.frames++;
+        this.frames += 2;
         console.log(this.frames);
       }
     },
@@ -65,10 +69,16 @@ export default {
         if (this.frameRate > 270 && this.frameRate < 320) {
           this.frameRate = 300;
         }
+        if (this.frameRate > 40 && this.frameRate < 70) {
+          this.frameRate = 60;
+        }
+        if (this.frameRate < 40) {
+          this.frameRate = 30;
+        }
         this.ratio = +(300 / this.frameRate).toFixed(2);
         this.$store.dispatch("ratio", this.ratio);
         console.log("frame rate: " + this.frameRate);
-      }, 1000);
+      }, 500);
     },
   },
 };

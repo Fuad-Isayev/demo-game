@@ -5,7 +5,6 @@
         <h1>Hello, {{ user.first_name }} {{ user.last_name }}</h1>
       </div>
       <h1 v-if="!user">You are not logged in</h1>
-      <router-link class="btn" to="/game">Start a game</router-link>
       <button @click="getWidth()">Get width</button>
       <button @click="getHeight()">Get height</button>
       <div>Frame-rate: {{ frameRate }} Ratio: {{ ratio }}</div>
@@ -33,12 +32,7 @@
     <div class="container my-4 border border-secondary p-3">
       <div class="row">
         <div class="col-10">
-          <input
-            type="text"
-            placeholder="Enter your message"
-            class="form-control"
-            v-model="this.message"
-          />
+          <input type="text" placeholder="Enter your message" class="form-control" v-model="this.message" />
         </div>
         <div class="col-2">
           <button type="submit" @click="sendMessage()" class="btn btn-primary">
@@ -46,6 +40,9 @@
           </button>
         </div>
       </div>
+    </div>
+    <div class="centered">
+      <router-link class="btn btn-primary btn-lg" to="/game">Start a game</router-link>
     </div>
   </div>
 </template>
@@ -189,4 +186,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+</style>

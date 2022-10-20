@@ -87,11 +87,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.btn {
-  width: 200px;
-}
-.btn:active {
-  width: 198px;
-}
-</style>
+<style></style>

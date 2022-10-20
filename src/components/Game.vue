@@ -12,7 +12,7 @@
         <!-- player'castle -->
         <div class="player_castle_health">
           {{ Math.floor(player_castle.health) }}/{{
-            player_castle.initial_health
+          player_castle.initial_health
           }}
         </div>
         <div class="player_castle"></div>
@@ -20,33 +20,27 @@
         <!-- enemy's catsle -->
         <div class="enemy_castle_health">
           {{ Math.floor(enemy_castle.health) }}/{{
-            enemy_castle.initial_health
+          enemy_castle.initial_health
           }}
         </div>
         <div class="enemy_castle"></div>
 
         <!-- player soldier -->
         <div :key="soldier" v-for="soldier in player_soldiers">
-          <div
-            class="player_soldier"
-            :style="{
-              top: soldier.top + '%',
-              'z-index': soldier.z,
-              left: soldier.left + '%',
-            }"
-          ></div>
+          <div class="player_soldier" :style="{
+            top: soldier.top + '%',
+            'z-index': soldier.z,
+            left: soldier.left + '%',
+          }"></div>
         </div>
 
         <!-- enemy soldier -->
         <div :key="soldier" v-for="soldier in enemy_soldiers">
-          <div
-            class="enemy_soldier"
-            :style="{
-              top: soldier.top + '%',
-              'z-index': soldier.z,
-              right: soldier.right + '%',
-            }"
-          ></div>
+          <div class="enemy_soldier" :style="{
+            top: soldier.top + '%',
+            'z-index': soldier.z,
+            right: soldier.right + '%',
+          }"></div>
         </div>
       </div>
       <div class="control_bar">
@@ -391,12 +385,14 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .ground {
   position: relative;
   background: green;
   width: 100vw;
   height: 30%;
 }
+
 .control_bar {
   background: rgb(168, 132, 132);
   width: 100vw;
@@ -407,8 +403,8 @@ export default {
 /* CASTLES */
 .player_castle,
 .enemy_castle {
-  background: lightcoral;
-  background-position-y: 20px;
+  background: url('../assets/castle.png');
+  background-repeat: no-repeat;
   width: 7%;
   aspect-ratio: 1/2;
   position: absolute;
@@ -435,6 +431,7 @@ export default {
 .player_castle {
   left: 5%;
 }
+
 .enemy_castle {
   right: 5%;
 }
@@ -447,11 +444,13 @@ export default {
   position: absolute;
   top: 0;
 }
+
 .player_soldier {
   background: rgba(0, 0, 255, 0.611);
   left: 175px;
   border: 0.15vw solid red;
 }
+
 .enemy_soldier {
   background: rgba(255, 0, 0, 0.611);
   right: 175px;
@@ -468,21 +467,26 @@ export default {
   font-size: 1.2vw;
   padding: 0;
 }
+
 .player_train {
   left: 1%;
 }
+
 .enemy_train {
   right: 1%;
 }
+
 .upgrade {
   left: 15%;
 }
+
 .money {
   position: absolute;
   left: 8px;
   top: 8px;
   font-size: 24px;
 }
+
 .screen {
   display: flex;
   justify-content: center;

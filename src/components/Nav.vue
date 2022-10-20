@@ -1,14 +1,30 @@
 <template>
-  <div>
-    <router-link v-if="!user" class="login btn" to="/login">Login</router-link>
-    <router-link v-if="!user" class="signup btn" to="/register"
-      >Signup</router-link
-    >
-    <router-link v-if="user" class="logout btn" @click="logOut" to="/">
-      Log out
-    </router-link>
-    <router-link class="home btn" to="/">Home </router-link>
-  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="row container-fluid text-white">
+      <div class="col-9">
+        <router-link class="navbar-brand" to="/">Home </router-link>
+      </div>
+      <div class="col-3">
+        <ul class="navbar-nav list-group-horizontal justify-content-end">
+          <li class="list-group-item mx-2">
+            <router-link v-if="!user" class="nav-link" to="/login"
+              >Login</router-link
+            >
+          </li>
+          <li class="list-group-item mx-2">
+            <router-link v-if="!user" class="nav-link" to="/register"
+              >Signup</router-link
+            >
+          </li>
+          <li class="list-group-item mx-2">
+            <router-link v-if="user" class="nav-link" @click="logOut" to="/">
+              Log out
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -31,28 +47,4 @@ export default {
 };
 </script>
 
-<style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-.btn {
-  width: 80px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-}
-.login {
-  right: 135px;
-}
-.signup {
-  right: 40px;
-}
-.home {
-  left: 40px;
-  /* z-index: 1; */
-}
-.logout {
-  right: 20px;
-}
-</style>
+<style></style>

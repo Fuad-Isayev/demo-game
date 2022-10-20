@@ -62,8 +62,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.btn {
-  width: 200px;
-}
-</style>
+<style></style>

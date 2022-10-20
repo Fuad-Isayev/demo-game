@@ -6,7 +6,6 @@
       <div>
         <input
           class="form-control"
-          :class="{ empty: this.empty_em & !this.email }"
           type="email"
           placeholder="Enter email"
           v-model="email"
@@ -80,45 +79,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* input:required:invalid {
-  border: 2px solid red;
-} */
-body {
-  text-align: center;
-  font-size: 24px;
-}
-.error {
-  position: absolute;
-  top: 95px;
-  left: 930px;
-}
-.perr {
-  top: 150px;
-}
-.btn {
-  position: absolute;
-}
-.login {
-  font-size: 18px;
-  width: 288px;
-  height: 25px;
-  box-sizing: content-box;
-  top: 200px;
-  left: auto;
-}
-.forgot {
-  font-size: 18px;
-  width: 300px;
-  height: 27px;
-  top: 250px;
-  left: auto;
-}
-.msg {
-  position: absolute;
-  top: 0;
-}
-.error {
-  font-size: 24px;
-}
-</style>
+<style></style>

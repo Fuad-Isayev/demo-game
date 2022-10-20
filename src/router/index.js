@@ -30,6 +30,9 @@ const routes = [
   {
     path: "/game",
     component: Game,
+    meta: {
+      hideNavbar: true,
+    },
   },
 ];
 

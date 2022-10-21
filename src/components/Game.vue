@@ -49,7 +49,7 @@
             TRAIN ${{ player_cost }}
           </button>
           <button class="upgrade" @click="upgrade()">{{ upg_msg }}</button>
-          <button class="enemy_train" @click="train_enemy()">TRAIN</button>
+          <!-- <button class="enemy_train" @click="train_enemy()">TRAIN</button> -->
         </div>
       </div>
     </div>
